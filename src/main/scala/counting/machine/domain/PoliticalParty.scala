@@ -1,16 +1,12 @@
 package counting.machine.domain
 
+import counting.machine.domain.Error.UnknownPoliticalParty
+
 object PoliticalParty {
-
-  def fromString(input: String): Either[Error, PoliticalParty] = input.toUpperCase match {
-    case "BJP" => Right(BJP)
-  }
-
 
   sealed trait PoliticalParty {
     val name: String
   }
-
 
   case object BJP extends PoliticalParty {
     override val name: String = "Bhartiya Janta Party"
@@ -36,4 +32,13 @@ object PoliticalParty {
     override val name: String = "Independant"
   }
 
+  def fromString(input: String) = input.toUpperCase match {
+    case "BJP" => Right(BJP)
+    case "INC" => Right(INC)
+    case "BSP" => Right(BSP)
+    case "CPI" => Right(CPI)
+    case "NCP" => Right(NCP)
+    case "IND" => Right(IND)
+    case code => Left(UnknownPoliticalParty(s"Unknown political party code:$code found."))
+  }
 }

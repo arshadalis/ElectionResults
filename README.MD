@@ -1,2 +1,6 @@
 #Election Results  
-It's election night
+   
+    
+     
+     
+For simplicity lower case party codes are assumed to be valid.

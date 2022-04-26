@@ -1,6 +1,12 @@
 package counting.machine.domain
 
-trait Error {
-  val errorMessage: String
+object Error {
+  trait Error {
+    val errorMessage: String
+  }
+
+  case class UnknownPoliticalParty(errorMessage: String) extends Error
 
 }
+
+
