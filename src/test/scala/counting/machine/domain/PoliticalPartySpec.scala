@@ -1,6 +1,6 @@
 package counting.machine.domain
 
-import counting.machine.domain.Error.UnknownPoliticalParty
+import counting.machine.domain.Errors.UnknownPoliticalParty
 import counting.machine.domain.PoliticalParty._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers

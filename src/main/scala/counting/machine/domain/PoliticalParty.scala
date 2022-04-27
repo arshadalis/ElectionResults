@@ -1,6 +1,6 @@
 package counting.machine.domain
 
-import counting.machine.domain.Error.UnknownPoliticalParty
+import counting.machine.domain.Errors.{Error, UnknownPoliticalParty}
 
 object PoliticalParty {
 
@@ -32,7 +32,7 @@ object PoliticalParty {
     override val name: String = "Independant"
   }
 
-  def fromString(input: String) = input.toUpperCase match {
+  def fromString(input: String): Either[Error, PoliticalParty] = input.toUpperCase match {
     case "BJP" => Right(BJP)
     case "INC" => Right(INC)
     case "BSP" => Right(BSP)

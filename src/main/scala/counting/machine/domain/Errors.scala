@@ -1,11 +1,15 @@
 package counting.machine.domain
 
-object Error {
-  trait Error {
+object Errors {
+
+
+  sealed trait Error {
     val errorMessage: String
   }
 
   case class UnknownPoliticalParty(errorMessage: String) extends Error
+
+  case class InvalidConstituencyName(errorMessage: String) extends Error
 
 }
 
