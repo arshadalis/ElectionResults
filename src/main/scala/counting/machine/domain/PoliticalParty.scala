@@ -1,6 +1,6 @@
 package counting.machine.domain
 
-import counting.machine.domain.Errors.{Error, UnknownPoliticalParty}
+import counting.machine.domain.Errors.{Error, InvalidPoliticalParty, UnknownPoliticalParty}
 
 object PoliticalParty {
 
@@ -39,6 +39,7 @@ object PoliticalParty {
     case "CPI" => Right(CPI)
     case "NCP" => Right(NCP)
     case "IND" => Right(IND)
+    case "" => Left(InvalidPoliticalParty("Invalid political party name. Empty party name provided."))
     case code => Left(UnknownPoliticalParty(s"Unknown political party code:$code found."))
   }
 }

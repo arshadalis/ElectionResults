@@ -1,6 +1,6 @@
 package counting.machine.domain
 
-import counting.machine.domain.Errors.UnknownPoliticalParty
+import counting.machine.domain.Errors.{InvalidPoliticalParty, UnknownPoliticalParty}
 import counting.machine.domain.PoliticalParty._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
@@ -31,6 +31,7 @@ class PoliticalPartySpec extends AnyFlatSpec with Matchers{
 
   it should "return UnknownPoliticalParty error if input string is not valid party code" in {
     extractPoliticalPartyFromString("BAC") shouldEqual Left(UnknownPoliticalParty("Unknown political party code:BAC found."))
+    extractPoliticalPartyFromString("") shouldEqual Left(InvalidPoliticalParty("Invalid political party name. Empty party name provided."))
   }
 
 }

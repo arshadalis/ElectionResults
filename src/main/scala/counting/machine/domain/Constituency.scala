@@ -12,5 +12,7 @@ object Constituency {
 
   def fromString(input: String): Either[Error, Constituency] =
     if (input.matches(constituencyPattern)) Right(Constituency(input))
-    else Left(InvalidConstituencyName(s"Invalid Constituency name provided:$input. Constituency name should pure Characters."))
+    else Left(
+      InvalidConstituencyName(s"Invalid Constituency name provided:$input. Constituency name should be alphabets only.")
+    )
 }

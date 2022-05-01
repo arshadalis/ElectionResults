@@ -8,6 +8,7 @@ object Errors {
   }
 
   case class UnknownPoliticalParty(errorMessage: String) extends Error
+  case class InvalidPoliticalParty(errorMessage: String) extends Error
 
   case class InvalidConstituencyName(errorMessage: String) extends Error
 
