@@ -1,6 +1,6 @@
-package counting.machine.domain
+package elections.domain
 
-import counting.machine.domain.Errors.InvalidConstituencyName
+import elections.domain.Error._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 

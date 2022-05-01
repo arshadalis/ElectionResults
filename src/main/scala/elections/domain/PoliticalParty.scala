@@ -1,6 +1,6 @@
-package counting.machine.domain
+package elections.domain
 
-import counting.machine.domain.Errors.{Error, InvalidPoliticalParty, UnknownPoliticalParty}
+import elections.domain.Error.{InvalidPoliticalParty, UnknownPoliticalParty}
 
 object PoliticalParty {
 

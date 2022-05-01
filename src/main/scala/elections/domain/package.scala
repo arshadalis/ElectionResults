@@ -1,4 +1,4 @@
-package counting.machine
+package elections.domain.machine
 
 package object domain {
 

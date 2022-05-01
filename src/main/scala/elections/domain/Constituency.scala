@@ -1,6 +1,6 @@
-package counting.machine.domain
+package elections.domain
 
-import counting.machine.domain.Errors.{Error, InvalidConstituencyName}
+import elections.domain.Error.InvalidConstituencyName
 
 
 case class Constituency(name: String)

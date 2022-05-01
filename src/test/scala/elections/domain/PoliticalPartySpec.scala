@@ -1,7 +1,7 @@
-package counting.machine.domain
+package elections.domain
 
-import counting.machine.domain.Errors.{InvalidPoliticalParty, UnknownPoliticalParty}
-import counting.machine.domain.PoliticalParty._
+import elections.domain.Error.{InvalidPoliticalParty, UnknownPoliticalParty}
+import elections.domain.PoliticalParty._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 

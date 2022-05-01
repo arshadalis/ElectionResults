@@ -1,11 +1,11 @@
-package counting.machine.domain
+package elections.domain
 
-object Errors {
+sealed trait Error {
+  val errorMessage: String
+}
 
 
-  sealed trait Error {
-    val errorMessage: String
-  }
+object Error {
 
   case class UnknownPoliticalParty(errorMessage: String) extends Error
   case class InvalidPoliticalParty(errorMessage: String) extends Error
